@@ -5,7 +5,7 @@ from kabeer import CMD_HELP
 from pyrogram import Client, filters
 from pyrogram.types import Message
 from pyrogram.types import Voice
-from helpers.callmusic import callsmusic
+from helpers.callsmusic import callsmusic
 
 @app1.on_message(filters.command("alive", PREFIX))
 @app2.on_message(filters.command("alive", PREFIX))
