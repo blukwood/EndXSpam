@@ -1,1 +1,1 @@
-worker: python3 -m TheBot
+worker: python3 -m EndXSpam
