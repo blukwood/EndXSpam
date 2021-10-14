@@ -68,7 +68,7 @@ async def alive(_, m):
 @app1.on_message(filters.command("ping", PREFIX))
 @app2.on_message(filters.command("ping", PREFIX))
 async def pingme(_, message: Message):
-    app_info = await app.get_me()
+    app_info = await Client.get_me()
     start = datetime.now()
     end = datetime.now()
     m_s = (end - start).microseconds / 1000
