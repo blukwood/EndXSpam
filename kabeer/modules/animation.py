@@ -18,10 +18,12 @@ CMD_HELP.update(
 
 @app1.on_message(filters.command("istar", PREFIX))
 @app2.on_message(filters.command("istar", PREFIX))
-async def kabeerstar(_, message: Message):
+async def kabeerstar(client: Client, message: Message):
+    msg = "I am A Star"
+    client.send_message(chat_id, text=msg)
     animation_interval = 2
     animation_ttl = range(0, 11)
-    await message.edit("I am A Star")
+    await message.edit(msg)
     animation_chars = [
         "I Party like a rockstar",
         "I Look like a movie star",
