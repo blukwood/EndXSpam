@@ -1,12 +1,13 @@
 from pyrogram import Client, filters
 from pyrogram.types import Message
 from config import PREFIX
-from kabeer import app, CMD_HELP
+from kabeer import app1, app2, CMD_HELP
 
 import asyncio
 
 
-@app.on_message(filters.command('delspam', PREFIX) & filters.me)
+@app1.on_message(filters.command('delspam', PREFIX))
+@app2.on_message(filters.command('delspam', PREFIX))
 async def statspam(client: Client, message: Message):
     quantity = message.command[1]
     spam_text = ' '.join(message.command[2:])
@@ -19,7 +20,8 @@ async def statspam(client: Client, message: Message):
         await asyncio.sleep(0.1)
 
 
-@app.on_message(filters.command('spam', PREFIX) & filters.me)
+@app1.on_message(filters.command('spam', PREFIX))
+@app2.on_message(filters.command("spam", PREFIX))
 async def spam(client: Client, message: Message):
     quantity = message.command[1]
     spam_text = ' '.join(message.command[2:])
@@ -39,7 +41,8 @@ async def spam(client: Client, message: Message):
         await asyncio.sleep(0.15)
 
 
-@app.on_message(filters.command('bspam', PREFIX) & filters.me)
+@app1.on_message(filters.command('bspam', PREFIX))
+@app2.on_message(filters.command("bspam", PREFIX))
 async def fastspam(client: Client, message: Message):
     quantity = message.command[1]
     spam_text = ' '.join(message.command[2:])
@@ -59,7 +62,8 @@ async def fastspam(client: Client, message: Message):
         await asyncio.sleep(0.02)
 
 
-@app.on_message(filters.command('sspam', PREFIX) & filters.me)
+@app1.on_message(filters.command('sspam', PREFIX))
+@app2.on_message(filters.command("sspam", PREFIX))
 async def slowspam(client: Client, message: Message):
     quantity = message.command[1]
     spam_text = ' '.join(message.command[2:])
