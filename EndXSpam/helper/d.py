@@ -4,7 +4,6 @@ from pyrogram import Client
 from pyrogram.types import Message
 
 from EndXSpam import SUDO
-from helpers.admins import get_administrators
 
 
 from typing import List
