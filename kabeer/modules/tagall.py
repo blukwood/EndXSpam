@@ -1,7 +1,7 @@
 from config import PREFIX
 import asyncio
-from kabeer import LOGGER, app
-from kabeer import app1, app2, CMD_HELP
+from kabeer import LOGGER, app1, app2
+from kabeer import CMD_HELP
 from pyrogram import Client, filters
 from pyrogram.types import Message
 
