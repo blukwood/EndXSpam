@@ -10,9 +10,6 @@ from typing import List
 
 from pyrogram.types import Chat
 
-from cache.admins import get as gett
-from cache.admins import set
-
 
 async def get_administrators(chat: Chat) -> List[int]:
     get = gett(chat.id)
@@ -44,3 +41,22 @@ def authorized_users_only(func: Callable) -> Callable:
                 return await func(client, message)
 
     return decorator
+
+
+
+
+from typing import Dict, List
+
+from config import admins
+
+admins: Dict[int, List[int]] = {}
+
+
+def set(chat_id: int, admins_: List[int]):
+    admins[chat_id] = admins_
+
+
+def get(chat_id: int) -> List[int]:
+    if chat_id in admins:
+        return admins[chat_id]
+    return []
