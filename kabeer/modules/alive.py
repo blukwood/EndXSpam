@@ -58,10 +58,7 @@ def get_readable_time(seconds: int) -> str:
 async def alive(_, m):
     start_time = time.time()
     uptime = get_readable_time((time.time() - StartTime))
-    reply_msg = f"↽↽↽↽↽↽↽↽↽↽↽↽↽↽↽↽↽↽↽↽↽"
     reply_msg = f"**I am Alive\n"
-    reply_msg += f"**Python Version:** `{__python_version__}`\n"
-    reply_msg += f"**Pyrogram Version:** `{__pyro_version__}`\n"
     end_time = time.time()
     reply_msg += f"\nUptime: {uptime}"
     await m.delete()
