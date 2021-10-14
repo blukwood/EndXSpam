@@ -54,7 +54,7 @@ def get_readable_time(seconds: int) -> str:
 
 
 @app1.on_message(filters.command("alive", PREFIX))
-@app2.on_message(filters.command("ping", PREFIX))
+@app2.on_message(filters.command("alive", PREFIX))
 async def alive(_, m):
     start_time = time.time()
     uptime = get_readable_time((time.time() - StartTime))
