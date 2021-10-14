@@ -9,5 +9,3 @@ dnspython
 requests
 pillow
 py-tgcalls
-aiohttp
-aiofiles
