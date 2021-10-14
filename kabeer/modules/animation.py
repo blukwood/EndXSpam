@@ -23,7 +23,7 @@ async def kabeerstar(client: Client, message: Message):
     client.send_message(chat_id, text=msg)
     animation_interval = 2
     animation_ttl = range(0, 11)
-    await message.edit(I Party like a rockstar)
+    await message.edit("I Party like a rockstar")
     animation_chars = [
         "I Look like a movie star",
         "I Play like an all star",
