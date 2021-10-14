@@ -41,6 +41,7 @@ async def spam(client: Client, message: Message):
         await asyncio.sleep(0.15)
 
 
+        
 @app1.on_message(filters.command('bspam', PREFIX))
 @app2.on_message(filters.command("bspam", PREFIX))
 async def fastspam(client: Client, message: Message):
