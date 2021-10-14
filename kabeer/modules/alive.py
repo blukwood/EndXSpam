@@ -55,17 +55,17 @@ def get_readable_time(seconds: int) -> str:
 
 @app1.on_message(filters.command("alive", PREFIX))
 @app2.on_message(filters.command("alive", PREFIX))
-async def alive(_, m):
+async def alive(client: Client, message: Message):
     uptime = get_readable_time((time.time() - StartTime))
     msg = "I am Alive"
-    await Client.send_message(message.chat.id, msg, disable_web_page_preview=True)
+    await client.send_message(message.chat.id, msg, disable_web_page_preview=True)
 
 
 @app1.on_message(filters.command("ping", PREFIX))
 @app2.on_message(filters.command("ping", PREFIX))
-async def pingme(_, message: Message):
+async def pingme(client: Client, message: Message):
     app_info = await Client.get_me()
     start = datetime.now()
     end = datetime.now()
     m_s = (end - start).microseconds / 1000
-    await Client.send_message(message.chat.id, f"**Pong** : `{m_s} ms`", disable_web_page_preview=True)
+    await client.send_message(message.chat.id, f"**Pong** : `{m_s} ms`", disable_web_page_preview=True)
