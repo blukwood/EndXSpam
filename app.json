@@ -10,7 +10,11 @@
     "repository": "https://github.com/Itz-fork/PyrogramExample",
     "success_url": "https://t.me/NexaBotsUpdates",
     "env": {
-        "BOT_TOKEN": {
+        "BOT_TOKEN1": {
+            "description": "Your Bot Token from @BotFather",
+            "value": ""
+        },
+        "BOT_TOKEN2": {
             "description": "Your Bot Token from @BotFather",
             "value": ""
         },
