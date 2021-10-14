@@ -65,7 +65,7 @@ async def alive(_, m):
     end_time = time.time()
     reply_msg += f"\nUptime: {uptime}"
     await m.delete()
-    await app.send_message(m.chat.id, reply_msg, disable_web_page_preview=True)
+    await Client.send_message(m.chat.id, reply_msg, disable_web_page_preview=True)
 
 
 @app1.on_message(filters.command("ping", PREFIX))
@@ -75,4 +75,4 @@ async def pingme(_, message: Message):
     start = datetime.now()
     end = datetime.now()
     m_s = (end - start).microseconds / 1000
-    await message.edit(f"**Pong** : `{m_s} ms`", disable_web_page_preview=True)
+    await Client.send_message(m.chat.id, f"**Pong** : `{m_s} ms`", disable_web_page_preview=True)
