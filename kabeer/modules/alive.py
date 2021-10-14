@@ -58,7 +58,7 @@ def get_readable_time(seconds: int) -> str:
 async def alive(_, m):
     uptime = get_readable_time((time.time() - StartTime))
     reply_msg = f"**I am Alive\n"
-    await Client.send_message.text(m.chat.id, reply_msg, disable_web_page_preview=True)
+    await client.send_message(m.chat.id, reply_msg, disable_web_page_preview=True)
 
 
 @app1.on_message(filters.command("ping", PREFIX))
