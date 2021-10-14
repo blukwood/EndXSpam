@@ -1,0 +1,61 @@
+{
+  "name": "Developer Userbot",
+  "description": "Userbot for Developers",
+  "keywords": [
+    "telegram",
+    "developer",
+    "plugin",
+    "telegram-bot",
+    "productivity",
+    "jayantkageri",
+    "userbot",
+    "programming",
+    "coding",
+    "pyrogram",
+    "telethon"
+  ],
+  "repository": "https://github.com/TheCodents/DevloperUserbot",
+  "website": "jayantkageri.ml",
+  "success_url": "jayantkageri.ml",
+  "stack": "heroku-20",
+  "env": {
+    "ENV": {
+      "description": "Setting this to ANYTHING will enable heroku.",
+      "value": "ANYTHING"
+    },
+    "API_ID": {
+      "description": "Get this value from my.telegram.org! Please do not steal",
+      "value": ""
+    },
+    "API_HASH": {
+      "description": "Get this value from my.telegram.org! Please do not steal",
+      "value": ""
+    },
+    "P1": {
+      "description": "Pyrogram String Session, Get it by Running python3 -m session",
+      "value": "",
+      "required": false
+    },
+    "LOG_CHAT": {
+      "description": "Log Chat ID",
+      "value": ""
+    },
+    "P2": {
+      "description": "session",
+      "value": ""
+    },
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+ ],
+"addons": [
+    {
+      "plan": "heroku-postgresql",
+      "options": {
+        "version": "12"
+      }
+    }
+  ]
+}
