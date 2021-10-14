@@ -5,7 +5,7 @@ from EndXSpam.helper.d import authorized_users_only
 
 
 @Client.on_message(filters.command("start"))
-@sudo_users_only
+@authorized_users_only
 async def start(_, message: Message):
     if message.from_user.id in SUDO:
         await message.reply_text(
