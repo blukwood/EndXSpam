@@ -6,16 +6,16 @@ if __name__ == "__main__" :
     plugins = dict(root="EndXSpam/plugins")
     end1 = Client(
         "Client1",
-        bot_token=Config.BOT_TOKEN1,
-        api_id=Config.APP_ID,
-        api_hash=Config.API_HASH,
+        bot_token=BOT_TOKEN1,
+        api_id=APP_ID,
+        api_hash=API_HASH,
         plugins=plugins
     )
     end2 = Client( # This is 2nd client. add much as you wish. but remember to edit starting process
         "Client2",
-        bot_token=Config.BOT_TOKEN2,
-        api_id=Config.APP_ID,
-        api_hash=Config.API_HASH,
+        bot_token=BOT_TOKEN2,
+        api_id=APP_ID,
+        api_hash=API_HASH,
         plugins=plugins
     )
     print("Waking Up Client 1")
